@@ -1,0 +1,22 @@
+{
+  "name": "596_proj",
+  "version": "1.0.0",
+  "description": "This project will be using population data from Missouri State University and d3.js to display a interactive map that the user can interface to look at the data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jguinn124/596_proj.git"
+  },
+  "author": "John Guinn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jguinn124/596_proj/issues"
+  },
+  "homepage": "https://github.com/jguinn124/596_proj#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
