@@ -1,4 +1,7 @@
 'use strict';
+
+import { functionTypeAnnotation } from "babel-types";
+
 let dataArray = [5, 11, 19];
 
 let svg = d3.select("body").append("svg")
@@ -44,10 +47,7 @@ newX = 900;
 svg.selectAll("line")
 .data(dataArray)
 .enter().append("line")
-	.attr("cx", function(d,i){
-		newX+=(d*3)+(i*20);
-		return newX;
-	})
-	.attr("cy", "100")
-	.attr("rx", function(d,i){return d*3})
-	.attr("ry", "30");
+	.attr("x1", newX)
+	.attr("y1", "100")
+	.attr("x2",function(d){return newX+(d*15); })
+	.attr("y2", "30");
