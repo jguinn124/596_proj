@@ -56,6 +56,7 @@ svg.selectAll("line")
 
 svg.append("text")
 	.text("start")
+	.attr("fill", "blue")
 	.attr("x", newX)
 	.attr("font-size", "30")
 	.attr("y", 150);
