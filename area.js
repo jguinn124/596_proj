@@ -6,9 +6,9 @@ let dataYears = ['2000','2001','2002','2003','2004','2005','2006','2007','2008',
 let height = 200;
 let width = 500;
 
-let y =d3.scaleLinear()
+let y = d3.scaleLinear()
 	.domain([0,100])
-	.range([height, 0]);
+	.range([height,0]);
 
 let yAxis = d3.axisLeft(y);
 
@@ -22,6 +22,7 @@ let svg = d3.select('body').append('svg')
 	.attr('width', '100%');
 svg.append('path').attr('d', area(dataArray))
 svg.append('g').attr('class', 'axis y')
-	.attr('transform', 'translate(50,40)')
-	.call('yAxis');
+	.attr('transform', 'translate(50,40)');
+	//.call('yAxis');
+	svg.call("yAxis");
 
