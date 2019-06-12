@@ -34,7 +34,7 @@ newX = 600;
 svg.selectAll("ellipse")
 .data(dataArray)
 .enter().append("ellipse")
-	.attr("cx", function(d,i){
+	.attr("cx", function(d,i) {
 		newX+=(d*3)+(i*20);
 		return newX;
 	})
