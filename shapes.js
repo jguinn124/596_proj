@@ -1,6 +1,6 @@
 'use strict';
 
-import { functionTypeAnnotation } from "babel-types";
+//import { functionTypeAnnotation } from "babel-types";
 
 let dataArray = [5, 11, 19];
 
@@ -48,6 +48,16 @@ svg.selectAll("line")
 .data(dataArray)
 .enter().append("line")
 	.attr("x1", newX)
-	.attr("y1", "100")
+	.attr("stroke", "blue")
+	.attr("stroke-width", "2")
+	.attr("y1", function(d,i){return 80+(i*20); })
 	.attr("x2",function(d){return newX+(d*15); })
-	.attr("y2", "30");
+	.attr("y2", function(d,i){return 80+(i*20); });
+
+svg.append("text")
+	.text("hello world")
+	.attr("x", newX)
+	.attr("font-size", "30")
+	.attr("y", 150);
+
+	
