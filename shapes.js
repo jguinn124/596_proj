@@ -55,9 +55,20 @@ svg.selectAll("line")
 	.attr("y2", function(d,i){return 80+(i*20); });
 
 svg.append("text")
-	.text("hello world")
+	.text("start")
 	.attr("x", newX)
 	.attr("font-size", "30")
 	.attr("y", 150);
 
-	
+svg.append("text")
+	.text("middle")
+	.attr("x", newX)
+	.attr("font-size", "30")
+	.attr("y", 180);
+
+svg.append("text")
+	.text("end")
+	.attr("x", newX)
+	.attr("font-size", "30")
+	.attr("y", 210);
+
