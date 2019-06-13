@@ -24,5 +24,5 @@ svg.append('path').attr('d', area(dataArray))
 svg.append('g').attr('class', 'axis y')
 	.attr('transform', 'translate(50,40)');
 	//.call('yAxis');
-	svg.call("yAxis");
+	svg.call('yAxis');
 
