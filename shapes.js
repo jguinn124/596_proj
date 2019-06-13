@@ -31,7 +31,9 @@ svg.append("g")
 
 */
 
-xAxis(svg.append("g"));
+xAxis(svg.append("g")
+		.attr("class", "x axis")
+		.attr("transform", "translate(0,300)"));
 
 
 let newX = 300;
