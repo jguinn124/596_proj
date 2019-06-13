@@ -28,8 +28,9 @@ svg.selectAll("rect")
 svg.append("g")
 		.attr("class", "x axis")
 		.call("xAxis");
-
-*/
+	
+		Use what is below
+*/  
 
 xAxis(svg.append("g")
 		.attr("class", "x axis")
