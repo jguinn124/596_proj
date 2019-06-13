@@ -6,8 +6,10 @@ let dataArray = [5, 11, 19];
 let dataDays = ["Mon", "Wed", "Fri"];
 
 let x = d3.scaleOrdinal()
-				.domain()
-				.range()
+				.domain(dataDays)
+				.range([25,85,145]);
+
+let xAxis = d3.axisBottom(x);
 
 let svg = d3.select("body").append("svg")
 	.attr("height", "100%")
@@ -21,6 +23,16 @@ svg.selectAll("rect")
 		.attr("fill", "blue")
 		.attr("x", function(d,i){return 60*i+30;})
 		.attr("y", function(d,i){return 300-(d*15);});
+
+/* This way does not work
+svg.append("g")
+		.attr("class", "x axis")
+		.call("xAxis");
+
+*/
+
+xAxis(svg.append("g"));
+
 
 let newX = 300;
 svg.selectAll("circle.first")
