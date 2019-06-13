@@ -3,6 +3,11 @@
 //import { functionTypeAnnotation } from "babel-types";
 
 let dataArray = [5, 11, 19];
+let dataDays = ["Mon", "Wed", "Fri"];
+
+let x = d3.scaleOrdinal()
+				.domain()
+				.range()
 
 let svg = d3.select("body").append("svg")
 	.attr("height", "100%")
