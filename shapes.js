@@ -2,12 +2,12 @@
 
 //import { functionTypeAnnotation } from "babel-types";
 
-let dataArray = [5, 11, 19];
+let dataArray = [10, 11, 19];
 let dataDays = ["Mon", "Wed", "Fri"];
 
 let x = d3.scaleOrdinal()
 				.domain(dataDays)
-				.range([25,85,145]);
+				.range([40,110,185]);
 
 let xAxis = d3.axisBottom(x);
 
