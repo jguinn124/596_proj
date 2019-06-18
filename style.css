@@ -2,3 +2,8 @@ html, body{
 	margin: 0;
 	height: 100%;
 }
+
+path{
+	stroke: green;
+	stroke-width: 2;
+}
