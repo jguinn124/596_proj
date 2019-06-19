@@ -35,5 +35,7 @@ d3.csv("Col.csv").get(function(error, data){
 
 	let line = d3.line()
 					.x(function(d){ return x(d.Year); })
-					.y(function(d){ return y(d.COL); })
+					.y(function(d){ return y(d.COL); });
+
+	chartGroup.append("path").attr("d", line(data));
 });
