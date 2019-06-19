@@ -27,6 +27,12 @@ d3.csv("Col.csv").get(function(error, data){
 	let svg = d3.select("body").append("svg")
 					.attr("height", "100%")
 					.attr("width", "100%");
-	let 
+
+	let margin = {left:50, right:50, top:40, bottom:0};
+
+	let chartGroup = svg.append("g")
+					.attr("transform", "translate("+margin.left+","+margin.right+")");
+
+	
 
 });
