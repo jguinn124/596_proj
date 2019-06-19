@@ -6,7 +6,7 @@ d3.csv("Col.csv").get(function(error, data){
 	let height = 300;
 	let width = 500;
 
-	let max = d3.max(data, function(d){return d.COV; });
+	let max = d3.max(data, function(d){return d.COL; });
 	console.log(max);
 
 
@@ -33,6 +33,7 @@ d3.csv("Col.csv").get(function(error, data){
 	let chartGroup = svg.append("g")
 					.attr("transform", "translate("+margin.left+","+margin.right+")");
 
-	
-
+	let line = d3.line()
+					.x(function(d){ return x(d.Year); })
+					.y(function(d){ return y(d.COL); })
 });
