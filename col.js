@@ -21,4 +21,12 @@ d3.csv("Col.csv").get(function(error, data){
 					.domain(minYear,maxYear)
 					.range(0,width);
 
+	let yAxis = d3.axisLeft(y);
+	let xAxis = d3.axisBottom(x);
+
+	let svg = d3.select("body").append("svg")
+					.attr("height", "100%")
+					.attr("width", "100%");
+	let 
+
 });
