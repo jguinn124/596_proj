@@ -5,6 +5,8 @@ d3.csv('prices.csv')
 	.row(function(d){ return {month: parseDate(d.month), price:Number(d.price.trim().slice(1))}; })
 	.get(function(error,data){
 
+		let tooltip = d3.select("body").append("div").style("opacity","0").style("position","absolute")
+
 		let height = 300;
 		let width = 500;
 
@@ -34,9 +36,17 @@ d3.csv('prices.csv')
 
 		chartGroup.append('path')
 			.attr('d',line(data))
-			.attr("stroke", "blue")
-			.attr("stroke-width", 2)
-			.attr("fill", "none");
+			.attr('stroke', 'blue')
+			.attr('stroke-width', 2)
+			.attr('fill', 'none')
+			.on("mousemove", function(d){
+					tooltip.style("opacity","1")
+					.style("left",d3.event.pageX+"px")
+					.style("top",d3.event.pageY+"px");
+
+					tooltip.html("number of sides: ");
+
+			});
 
 		chartGroup.append('g')
 			.attr('class','x axis')
