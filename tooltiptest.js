@@ -9,7 +9,7 @@ let svg = d3.select('body').append('svg')
 	.attr('height', height);
 
 svg.append('g')
-	.attr('transform', 'translate(480,50) rotate(60) scale(2)')
+	.attr('transform', 'translate(50,50) scale(2)')
 	.append('rect')
 	.attr('width', 140)
 	.attr('height', 140)

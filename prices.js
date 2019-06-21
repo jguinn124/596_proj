@@ -47,8 +47,8 @@ d3.csv('prices.csv')
 					.style("left",d3.event.pageX+"px")
 					.style("top",d3.event.pageY+"px");
 
-					console.log(data)
-					console.log(data.Date);
+					//console.log(data);
+					//console.log(data.Date);
 
 
 
