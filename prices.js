@@ -44,8 +44,7 @@ d3.csv('prices.csv')
 					.style("left",d3.event.pageX+"px")
 					.style("top",d3.event.pageY+"px");
 
-					console.log(x(d.month));
-					console.log(y(d.price));
+					console.log(this);
 
 					tooltip.html();
 
