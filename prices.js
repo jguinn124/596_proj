@@ -1,9 +1,12 @@
 'use strict';
-let parseDate = d3.timeParse('%m/%d/%Y');
 
+let parseDate = d3.timeParse('%m/%d/%Y');
 d3.csv('prices.csv')
 	.row(function(d){ return {month: parseDate(d.month), price:Number(d.price.trim().slice(1))}; })
 	.get(function(error,data){
+
+		let timeFormat = d3.timeFormat('%H:%M:%S %L');
+
 
 		let tooltip = d3.select("body").append("div").style("opacity","0").style("position","absolute")
 
@@ -44,7 +47,10 @@ d3.csv('prices.csv')
 					.style("left",d3.event.pageX+"px")
 					.style("top",d3.event.pageY+"px");
 
-					console.log(d3.select.this);
+					console.log(data)
+					console.log(data.Date);
+
+
 
 					tooltip.html();
 
