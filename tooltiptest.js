@@ -1,35 +1,37 @@
+'use strict';
 
-var width = 960,
-height = 500;
 
-var svg = d3.select("body").append("svg")
-.attr("width", width)
-.attr("height", height);
+let width = 960,
+	height = 500;
 
-svg.append("g")
-.attr("transform", "translate(480,50) rotate(60) scale(2)")
-.append("rect")
-.attr("width", 140)
-.attr("height", 140)
-.on("mouseover", mouseover)
-.on("mousemove", mousemove)
-.on("mouseout", mouseout);
+let svg = d3.select('body').append('svg')
+	.attr('width', width)
+	.attr('height', height);
 
-var div = d3.select("body").append("div")
-.attr("class", "tooltip")
-.style("display", "none");
+svg.append('g')
+	.attr('transform', 'translate(480,50) rotate(60) scale(2)')
+	.append('rect')
+	.attr('width', 140)
+	.attr('height', 140)
+	.on('mouseover', mouseover)
+	.on('mousemove', mousemove)
+	.on('mouseout', mouseout);
+
+let div = d3.select('body').append('div')
+	.attr('class', 'tooltip')
+	.style('display', 'none');
 
 function mouseover() {
-div.style("display", "inline");
+	div.style('display', 'inline');
 }
 
 function mousemove() {
-div
-  .text(d3.event.pageX + ", " + d3.event.pageY)
-  .style("left", (d3.event.pageX - 34) + "px")
-  .style("top", (d3.event.pageY - 12) + "px");
+	div
+		.text(d3.event.pageX + ', ' + d3.event.pageY)
+		.style('left', (d3.event.pageX - 34) + 'px')
+		.style('top', (d3.event.pageY - 12) + 'px');
 }
 
 function mouseout() {
-div.style("display", "none");
+	div.style('display', 'none');
 }
