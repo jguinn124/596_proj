@@ -28,8 +28,8 @@ function mouseover() {
 function mousemove() {
 	div
 		.text(d3.event.pageX + ', ' + d3.event.pageY)
-		.style('left', (d3.event.pageX - 34) + 'px')
-		.style('top', (d3.event.pageY - 12) + 'px');
+		.style('left', d3.event.pageX + 'px')
+		.style('top', d3.event.pageY + 'px');
 }
 
 function mouseout() {

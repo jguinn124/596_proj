@@ -11,6 +11,7 @@ html, body{
 	height: 12px;
 	padding: 8px;
 	margin-top: -20px;
-	font: 10px sans-serif;
-	background: #ddd;
+	font: 10px sans-serif bold;
+	color: white;
+	background: blue;
 	pointer-events: none;
